@@ -9,8 +9,8 @@ POST {{host}}/api/user/register
 Content-Type: application/json
 
 {
-  "name": "noddy",
-  "email": "noddy@example.com",
+  "name": "parth",
+  "email": "parth@example.com",
   "password": "password123"
 }
 
@@ -19,7 +19,7 @@ POST {{host}}/api/user/login
 Content-Type: application/json
 
 {
-  "email": "noddy@example.com",
+  "email": "parth@example.com",
   "password": "password123"
 }
 
