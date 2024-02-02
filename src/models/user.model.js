@@ -6,7 +6,6 @@ const UserSchema = new mongoose.Schema({
     password: {type: String, required: true},
     pic: {
         type: String,
-        required: true,
         default: "https://avatar.iran.liara.run/public/boy?username=Ash"
     }
 },
