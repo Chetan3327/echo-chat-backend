@@ -72,7 +72,6 @@ const allUser = async (req, res) => {
     }
 };
 const findUser = async (req, res) => {
-    console.log(req.query.search)
     try {
         const keyword = req.query.search
         ? {
@@ -84,11 +83,6 @@ const findUser = async (req, res) => {
         : {};
         
         const users = await UserModel.find({ ...keyword, _id: { $ne: req.user._id } }, { password: 0 });
-
-        if (!users || users.length === 0) {
-            res.status(404).json({ message: 'No User found' });
-            return;
-        }
         
         res.status(200).json(users);
     } catch (error) {

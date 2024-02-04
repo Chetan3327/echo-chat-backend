@@ -19,7 +19,7 @@ POST {{host}}/api/user/login
 Content-Type: application/json
 
 {
-  "email": "parth@example.com",
+  "email": "noddy@example.com",
   "password": "password123"
 }
 
@@ -32,4 +32,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZ
 ### Get user by name or email
 GET {{host}}/api/user?search=harsh
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZDc1NWIzN2JmN2RiMTBjYTlhOTciLCJpYXQiOjE3MDY4NzQ3MTIsImV4cCI6MTcwNjk2MTExMn0.PwCqdjl3HISYSNJgmbUqrRInRooduCSuVpNQdPmVdnk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZDgyM2IzN2JmN2RiMTBjYTlhYTkiLCJpYXQiOjE3MDY4OTM5ODgsImV4cCI6MTcwNjk4MDM4OH0.FGckxj_VGsXOcc54pEalKAVV-louq1pd21DGyyw1NGM
+
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZDc1NWIzN2JmN2RiMTBjYTlhOTciLCJpYXQiOjE3MDY4NzQ3MTIsImV4cCI6MTcwNjk2MTExMn0.PwCqdjl3HISYSNJgmbUqrRInRooduCSuVpNQdPmVdnk

@@ -12,7 +12,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZ
 ### Get all chats of user
 GET {{host}}/api/chat
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZDc1NWIzN2JmN2RiMTBjYTlhOTciLCJpYXQiOjE3MDY4NzQ3MTIsImV4cCI6MTcwNjk2MTExMn0.PwCqdjl3HISYSNJgmbUqrRInRooduCSuVpNQdPmVdnk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZDgyM2IzN2JmN2RiMTBjYTlhYTkiLCJpYXQiOjE3MDcwMzI3MTgsImV4cCI6MTcwNzExOTExOH0.0FeHyp4i9Bsp1a2cJLuwqLkSdcUfZUfBr63hUuLJYg0
 
 ### create a group
 POST {{host}}/api/chat/createGroup

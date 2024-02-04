@@ -48,13 +48,18 @@ const accessChat = async (req, res) => {
 
 const fetchChat = async (req, res) => {
     try {
-        const chats = await ChatModel.find({users: {$elemMatch: {$eq: req.user._id}}})
-        .populate('users', '-password')
-        .populate('groupAdmin', '-password')
-        .populate('latestMessage')
-        .sort({updatedAt: -1})
-        
-        res.status(200).send(chats)        
+        ChatModel.find({ users: { $elemMatch: { $eq: req.user._id } } })
+        .populate("users", "-password")
+        .populate("groupAdmin", "-password")
+        .populate("latestMessage")
+        .sort({ updatedAt: -1 })
+        .then(async (results) => {
+            results = await UserModel.populate(results, {
+            path: "latestMessage.sender",
+            select: "name pic email",
+            });
+            res.status(200).send(results);
+        });      
     } catch (error) {
         console.error('Error during accessing chat:', error);
         res.status(500).json({ message: 'Internal Server Error' });
