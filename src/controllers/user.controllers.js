@@ -91,4 +91,20 @@ const findUser = async (req, res) => {
     }
 }
 
-export {registerUser, loginUser, allUser, findUser}
+const uploadPic = async (req, res) => {
+    try {
+        const {newPic} = req.body
+        const user = await UserModel.findByIdAndUpdate(req.user._id, {pic: newPic}, {new: true})
+        
+        if(!user){
+            return res.status(400).send('user not found')
+        }else{
+            res.json(user)
+        }
+    } catch (error) {
+        console.error('Error during uploading pic chat:', error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+}
+
+export {registerUser, loginUser, allUser, findUser, uploadPic}
