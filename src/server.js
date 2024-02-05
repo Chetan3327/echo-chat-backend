@@ -29,10 +29,11 @@ import { Server } from "socket.io";
 
 const httpServer = createServer(app);
 
+const CLIENT_URL = process.env.CLIENT_URL
 const io = new Server(httpServer, {
     pingTimeout: 60000,
     cors: {
-        origin: 'http://127.0.0.1:5173'
+        origin: CLIENT_URL
     }
 })
 

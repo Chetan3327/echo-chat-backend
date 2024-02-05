@@ -27,11 +27,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZ
 ### rename a group
 PUT {{host}}/api/chat/renameGroup
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZDc1NWIzN2JmN2RiMTBjYTlhOTciLCJpYXQiOjE3MDY4NzQ3MTIsImV4cCI6MTcwNjk2MTExMn0.PwCqdjl3HISYSNJgmbUqrRInRooduCSuVpNQdPmVdnk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWJjZDgyM2IzN2JmN2RiMTBjYTlhYTkiLCJpYXQiOjE3MDcwNjI5OTcsImV4cCI6MTcwNzE0OTM5N30.a24R_dAQGLZEAvS9mplSH5C0Tdz6_MX_zJr5AJfKcxM
 
 {
   "chatId": "65bd01c4f0f5c88b7e57a0db",
-  "newGroupName": "Test Group updated"
+  "newGroupName": "Test Group hc"
 }
 
 ### add to group
