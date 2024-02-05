@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-    console.log('hello')
+    res.json({message: "hello, world"})
 })
 
 import userRoute from './routes/user.routes.js'
@@ -43,13 +43,11 @@ io.on('connection', (socket) => {
     socket.on('setup', (userData) => {
         if(!userData) return
         socket.join(userData._id)
-        console.log('object')
         socket.emit('connected')
     })
 
     socket.on('join chat', (room) => {
         socket.join(room)
-        console.log('joined room', room)
     })
 
     socket.on('new message', (newMessageRecieved) => {
